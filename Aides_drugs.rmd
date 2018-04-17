@@ -45,34 +45,14 @@ colPerc(Gbsex)
 
 We will subset the data by sex to see if the drug is sex specific.
 
-```{r}
-At<- Atriplavast
-View(At)
-```
-
-```{r}
-Atsex<-xtabs(~infected+group,data=At)
-Atsex
-```
 
 
-# abacavirinol
+# Abacavirinol
 
 We will subset the data by sex to see if the drug is sex specific.
 
-```{r}
-Ab<- abacavirinol
-View(Ab)
-```
-
-```{r}
-Absex<-xtabs(~infected+group,data=Ab)
-Absex
-```
 
 
-
-# Cunclusion
 
 
 
