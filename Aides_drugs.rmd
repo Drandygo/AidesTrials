@@ -23,17 +23,56 @@ Three new preventative aides drugs were tested in clinical trials in 2015. The t
 
 We will subset the data by sex to see if the drug is sex specific.
 
+```{r}
+Gb<- Genvoyabub
+View(Gb)
+```
+
+```{r}
+Gbsex<-xtabs(~infected+group,data=Gb)
+Gbsex
+```
+
+```{r}
+barchartGC(Gbsex,type = "percent")
+chisqtestGC(Gbsex, graph = TRUE)
+colPerc(Gbsex)
+```
+
+
 
 # Atriplavast
 
 We will subset the data by sex to see if the drug is sex specific.
 
+```{r}
+At<- Atriplavast
+View(At)
+```
+
+```{r}
+Atsex<-xtabs(~infected+group,data=At)
+Atsex
+```
 
 
 # abacavirinol
 
 We will subset the data by sex to see if the drug is sex specific.
 
+```{r}
+Ab<- abacavirinol
+View(Ab)
+```
+
+```{r}
+Absex<-xtabs(~infected+group,data=Ab)
+Absex
+```
+
+
+
+# Cunclusion
 
 
 
