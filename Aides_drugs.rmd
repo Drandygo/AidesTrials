@@ -34,9 +34,10 @@ Gbsex
 ```
 
 ```{r}
-barchartGC(Gbsex,type = "percent")
+barchartGC(Gbsex,type = "percent", main= "Genvoyabub", xlab="Group")
 chisqtestGC(Gbsex, graph = TRUE)
 colPerc(Gbsex)
+fisher.test(Gbsex)
 ```
 
 
