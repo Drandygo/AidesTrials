@@ -40,7 +40,7 @@ Atsex
 
 
 
-# abacavirinol
+# Abacavirinol
 
 We will subset the data by sex to see if the drug is sex specific.
 
