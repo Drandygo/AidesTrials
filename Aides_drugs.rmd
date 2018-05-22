@@ -40,6 +40,14 @@ colPerc(Gbsex)
 fisher.test(Gbsex)
 ```
 
+```{r}
+xx<- numeric(1000)
+for (i in 1:1000) {
+  xx[i]~mean(sample(Gbsex,size = 101))
+}
+plot(density(xx))
+```
+
 
 
 # Atriplavast
