@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Aides Tests"
 author: "Dr K"
@@ -49,3 +50,74 @@ We will subset the data by sex to see if the drug is sex specific.
 
 
 
+=======
+---
+title: "Aides Tests"
+author: "Dr K"
+date: "May 24, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tigerstats)
+require(dplyr)
+Genvoyabub <-read.csv(file="Genvoyabub.csv",header=TRUE)
+abacavirinol<-read.csv(file="abacavirinol.csv",header=TRUE)
+Atriplavast<-read.csv(file="Atriplavast.csv",header=TRUE)
+```
+
+#Instructions
+
+Three new preventative aides drugs were tested in clinical trials in 2015. The trial designs were modeled after the famous RV_144 Aides Trials in Tailand in 2009.  Analyze and report on the apparent effectiveness of the three different drugs. Does sex of the participant seem to be a factor for any of the drugs?
+
+
+# Genvoyabub
+
+We will subset the data by sex to see if the drug is sex specific.
+
+```{r}
+Gb<- Genvoyabub
+View(Gb)
+```
+
+```{r}
+Gbsex<-xtabs(~infected+group,data=Gb)
+Gbsex
+```
+
+```{r}
+barchartGC(Gbsex,type = "percent", main= "Genvoyabub", xlab="Group")
+chisqtestGC(Gbsex, graph = TRUE)
+colPerc(Gbsex)
+fisher.test(Gbsex)
+```
+
+```{r}
+xx<- numeric(1000)
+for (i in 1:1000) {
+  xx[i]~mean(sample(Gbsex,size = 101))
+}
+plot(density(xx))
+```
+
+
+
+# Atriplavast
+
+We will subset the data by sex to see if the drug is sex specific.
+
+
+
+# Abacavirinol
+
+We will subset the data by sex to see if the drug is sex specific.
+
+
+
+
+
+
+
+
+>>>>>>> Final
